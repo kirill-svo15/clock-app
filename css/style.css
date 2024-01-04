@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;500&display=swap');
+:root{
+    --bg:#F2E9FF;
+    --black:#0F0F0F;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background-color: var(--bg);
+    font-family: 'Sofia Sans', sans-serif;
+}
+
+.wrapper{
+    max-width: 600px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+
+
+.navigation-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation-list a{
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.active-page{
+    position: relative;
+}
+
+.active-page::after{
+    content: '';
+    bottom: -10px;
+    right: 45%;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background-color: #0F0F0F;
+    border-radius: 50%;
+}
+
+
+.clock{
+    height: 400px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: aliceblue;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+
+.clock label{
+    position: absolute;
+    inset: 20px;
+    text-align: center;
+    transform: rotate(calc(var(--i)*(360deg/12)));
+}
+
+.clock label span{
+    display: inline-block;
+    font-size: 36px;
+    transform: rotate(calc(var(--i)*(-360deg/12)));
+}
+
+.clock .clock-hands{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.clock-hands:before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    z-index: 100;
+    background-color: #0F0F0F;
+    border: 4px solid darkgray;
+
+}
+
+.clock-hands .hand{
+    position: absolute;
+    height: 130px;
+    width: 2px;
+    bottom: 0;
+    border-radius: 25px;
+    transform-origin: bottom;
+    background-color:darkgray;
+}
+
+.hand.minutes{
+    width: 5px;
+    height: 120px;
+    background:darkslategray;
+}
+
+.hand.hours{
+    width:10px;
+    height: 100px;
+    border:4px solid darkslategrey;
+    background-color: transparent;
+}
+
+.date{
+    display: flex;
+    justify-content: space-between;
+    font-size: 32px;
+}
+
+.date .date-timecut{
+    font-size: 18px;
+}
+
+.add-clock{
+    border: none;
+    background-color: #D0A2F7;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    align-self: end;
+    font-size: 30px;
+    cursor: pointer;
+}

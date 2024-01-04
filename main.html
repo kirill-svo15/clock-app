@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Clock App</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="wrapper">
+        <nav class="navigation">
+          <ul class="navigation-list">
+            <li><a href="main.html" class="active-page">Clock</a></li>
+            <li><a href="alarm.html">Alarm</a></li>
+            <li><a href="stopwatch.html">Stopwatch</a></li>
+            <li><a href="timer.html">Timer</a></li>
+          </ul>
+        </nav>
+        <div class="clock">
+          <label style="--i: 3"><span>3</span></label>
+          <label style="--i: 6"><span>6</span></label>
+          <label style="--i: 9"><span>9</span></label>
+          <label style="--i: 12"><span>12</span></label>
+          <div class="clock-hands">
+            <div class="clock-hand hand hours"><i></i></div>
+            <div class="clock-hand hand minutes"><i></i></div>
+            <div class="clock-hand hand seconds"><i></i></div>
+          </div>
+        </div>
+        <div class="date">
+          <div class="date-time">
+            <span class="date-timehr">06</span>
+            <span>:</span>
+            <span class="date-timemin">00</span>
+            <!-- <span class="date-timecut">AM</span>  -->
+          </div>
+          <div class="date-day">
+            <span class="date-dayweek">Tue</span>
+            <span>,</span>
+            <span class="date-daynum">21 Nov</span>
+          </div>
+        </div>
+        <button class="add-clock">+</button>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
